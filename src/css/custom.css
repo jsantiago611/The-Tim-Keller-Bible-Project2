@@ -1,0 +1,510 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@font-face {
+  font-family: "Reckless";
+  src: url("/font/reckless.woff") format("woff");
+  display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "signifier";
+  src: url("/font/signifier-web-bold.woff2") format("woff2");
+  display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "signifier";
+  src: url("/font/signifier-web-light-italic.woff2") format("woff2");
+  display: swap;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "signifier";
+  src: url("/font/signifier-web-light.woff2") format("woff2");
+  display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "soehne-ikon";
+  src: url("/font/soehne-ikon-web-buch.woff2") format("woff2");
+  display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "soehne";
+  src: url("/font/soehne-web-buch--.woff2") format("woff2");
+  display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "soehne";
+  src: url("/font/soehne-web-buch--kursiv.woff2") format("woff2");
+  display: swap;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "soehne";
+  src: url("/font/soehne-web-halbfett.woff2") format("woff2");
+  display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "calibre";
+  src: url("/font/CalibreWeb-Light.woff") format("woff");
+  display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "calibre";
+  src: url("/font/CalibreWeb-Regular.woff") format("woff");
+  display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "calibre";
+  src: url("/font/CalibreWeb-Medium.woff") format("woff");
+  display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "calibre";
+  src: url("/font/CalibreWeb-Semibold.woff") format("woff");
+  display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "founders";
+  src: url("/font/FoundersGroteskMono-Regular.woff") format("woff");
+  display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "salter";
+  src: url("/font/SalterTRIAL-Roman.ttf") format("opentype");
+  display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --ifm-color-primary: var(--green);
+  --ifm-color-primary-dark: black;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --font-family-heading: "Reckless", -apple-system, BlinkMacSystemFont,
+    avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto,
+    noto, arial, sans-serif;
+  --font-family-subheading: "Reckless", -apple-system, BlinkMacSystemFont,
+    avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto,
+    noto, arial, sans-serif;
+  --font-family-body: "soehne", Iowan Old Style, Apple Garamond, Baskerville,
+    Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-family-meta: "soehne", -apple-system, BlinkMacSystemFont, avenir next,
+    avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
+    sans-serif;
+  --font-family-menu: "soehne", -apple-system, BlinkMacSystemFont, avenir next,
+    avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
+    sans-serif;
+  --font-weight-h1: 700;
+  --hero-color: #faf7f2;
+  --hero-subtitle-color: #ffb982;
+  --light-beige: #fff2e8;
+  --dark-beige: #ffb982;
+  --green: #13412e;
+  --navbar: #faf7f2;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #ffb982;
+  --ifm-color-primary-dark: black;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #fff2e8;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --font-family-heading: "Reckless";
+  --font-family-subheading: "Reckless";
+  --font-family-body: "soehne";
+  --font-family-meta: "soehne";
+  --font-family-menu: "soehne";
+  --font-weight-h1: 700;
+  --hero-color: white;
+  --light-beige: #fff2e8;
+  --navbar: var(--ifm-background-surface-color);
+}
+
+.navbar {
+  background-color: var(--ifm-navbar-background-color);
+  display: flex;
+  height: var(--ifm-navbar-height);
+  padding: var(--ifm-navbar-padding-vertical)
+    var(--ifm-navbar-padding-horizontal);
+  border-bottom: 1px dotted var(--ifm-color-primary-contrast-foreground);
+  box-shadow: none;
+  font-size: 16px;
+}
+
+.navbar__title {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.breadcrumbs__link {
+  font-family: var(--font-family-menu);
+  padding: 0 0.5rem;
+  background: transparent;
+}
+
+.breadcrumbs__item:not(.breadcrumbs__item--active):hover .breadcrumbs__link {
+  background-color: transparent !important;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: transparent;
+  border-radius: var(--ifm-global-radius);
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero__title {
+  font-style: normal;
+  font-family: var(--font-family-heading) !important;
+  /*font-family: "salter" !important;*/
+  color: var(--hero-color);
+  line-height: 0.9;
+  letter-spacing: -0.07ch;
+}
+
+.hero__subtitle {
+  color: var(--hero-color);
+  padding-top: 1rem;
+  line-height: 1.4;
+  font-family: var(--font-family-body);
+}
+
+.hero--primary {
+  --ifm-hero-background-color: var(--ifm-color-primary-dark);
+}
+
+.heroBanner_src-pages-index-module {
+  text-align: left !important;
+}
+
+.buttons_src-pages-index-module {
+  justify-content: flex-start !important;
+}
+
+.docSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module {
+  /*border-right: 0 !important;*/
+}
+
+h1 {
+  font-family: var(--font-family-subheading);
+  font-size: 45px;
+  font-weight: var(--font-weight-h1);
+  line-height: 0.9;
+  letter-spacing: -0.09ch;
+  font-variant-ligatures: discretionary-ligatures;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-subheading);
+  font-weight: 700;
+}
+
+@media (min-width: 300px) and (max-width: 1069px) {
+  .markdown h1:first-child {
+    font-size: calc(45px + (80 - 60) * (100vw - 300px) / (1070 - 300));
+  }
+  .markdown h2 {
+    font-size: calc(35px + (40 - 35) * (100vw - 300px) / (1500 - 300));
+  }
+  .hero__title {
+    font-size: calc(40px + (120 - 40) * (100vw - 300px) / (1500 - 300));
+  }
+}
+
+@media (min-width: 1070px) {
+  .markdown h1:first-child {
+    font-size: 80px;
+  }
+  .markdown h2 {
+    font-size: 40px;
+  }
+  .hero__title {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 299px) {
+  .hero__title {
+    font-size: 40px;
+  }
+  .navbar__title {
+    font-size: 25px;
+  }
+  .hero__subtitle {
+    padding-top: 0.7rem;
+  }
+}
+
+p {
+  font-family: var(--font-family-body);
+  font: size 1.2rem;
+  font-feature-settings: "dlig", "liga", "calt", "onum";
+}
+
+/*
+a::after {
+  font-family: "soehne-ikon";
+  content: " ⇗" !important;
+} */
+
+.hash-link::before {
+  content: "#" !important;
+}
+
+.hash-link::after {
+  content: "" !important;
+}
+
+.tocCollapsibleButton_node_modules-\@docusaurus-theme-classic-lib-next-theme-TOCCollapsible-styles-module::after {
+  content: "↑" !important;
+  background: transparent !important;
+  filter: none !important;
+  font-family: soehne-ikon !important;
+}
+
+.toggle {
+  align-items: center;
+  display: flex;
+  height: 10px;
+  justify-content: center;
+  position: relative;
+  width: 10px;
+}
+.toggle::before {
+  position: absolute;
+}
+.moon::before {
+  content: "\1F31C";
+}
+.sun::before {
+  content: "\1F31E";
+}
+
+.blogPostData_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module {
+  font-family: var(--font-family-meta);
+}
+
+.tagRegular_node_modules-\@docusaurus-theme-classic-lib-next-theme-Tag-styles-module {
+  font-family: var(--font-family-meta);
+}
+
+.menu__link,
+.menu__caret {
+  font-family: var(--font-family-menu);
+  line-height: 1;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  font-weight: normal;
+}
+
+.menu__list-item-collapsible .menu__link:hover,
+.menu__list-item-collapsible .menu__link--active {
+  font-weight: normal;
+}
+
+.navbar__title,
+.navbar__link {
+  font-family: var(--font-family-menu);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  text-decoration: underline;
+  color: var(--ifm-navbar-link-color);
+}
+
+.hash-link {
+  font-family: var(--font-family-subheading);
+}
+
+.blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module {
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+}
+
+.navbar__logo img {
+  height: 0;
+}
+
+.table-of-contents__link {
+  font-family: var(--font-family-menu);
+  font-size: 12px;
+}
+
+.tocCollapsibleButton_node_modules-\@docusaurus-theme-classic-lib-next-theme-TOCCollapsible-styles-module {
+  font-family: var(--font-family-meta);
+}
+
+.tocCollapsible_node_modules-\@docusaurus-theme-classic-lib-next-theme-TOCCollapsible-styles-module {
+  border: 1px solid var(--ifm-color-primary-contrast-foreground) !important;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  font-weight: normal;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code,
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+  font-weight: normal;
+}
+
+.markdown li {
+  font-family: var(--font-family-body);
+  font-size: 1.25rem;
+}
+
+.pagination-nav__link {
+  font-family: var(--font-family-meta);
+  font-weight: normal !important;
+}
+
+.footer {
+  font-family: var(--font-family-meta);
+}
+
+.markdown > pre,
+.markdown > ul,
+.markdown > p {
+  font-size: 1.25rem;
+}
+
+.navbar-sidebar__back {
+  font-family: var(--font-family-meta);
+}
+
+.row .col.col--3 {
+  font-family: var(--font-family-meta);
+}
+
+.button {
+  font-family: var(--font-family-meta);
+  border-radius: 0;
+  font-weight: 400;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code,
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+  font-weight: bold;
+}
+
+blockquote {
+  border-color: var(--ifm-blockquote-border-color);
+  border-style: solid;
+  border-width: 0;
+  border-left-width: var(--ifm-blockquote-border-left-width);
+  box-shadow: var(--ifm-blockquote-shadow);
+  color: var(--ifm-blockquote-color);
+  font-size: 140%;
+  margin: 0 0 var(--ifm-spacing-vertical);
+  padding: var(--ifm-blockquote-padding-vertical)
+    var(--ifm-blockquote-padding-horizontal);
+  font-style: italic;
+}
+
+.footer__title {
+  font-family: var(--font-family-meta);
+  font-weight: bold;
+}
+
+.pagination-nav__item--next .pagination-nav__label::after {
+  content: " →";
+  font-family: "Reckless";
+}
+
+.pagination-nav__item:first-child .pagination-nav__label::before {
+  content: "← ";
+  font-family: "Reckless";
+}
+
+.breadcrumbs__item:not(:last-child):after {
+  background: transparent;
+  content: " →";
+  display: inline-block;
+  filter: var(--ifm-breadcrumb-separator-filter);
+  height: calc(
+    var(--ifm-breadcrumb-separator-size) * var(--ifm-breadcrumb-size-multiplier) *
+      var(--ifm-breadcrumb-separator-size-multiplier)
+  );
+  margin: 0 0.5rem;
+  opacity: 0.5;
+  width: calc(
+    var(--ifm-breadcrumb-separator-size) * var(--ifm-breadcrumb-size-multiplier) *
+      var(--ifm-breadcrumb-separator-size-multiplier)
+  );
+  font-family: "Reckless";
+}
